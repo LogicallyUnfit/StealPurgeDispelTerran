@@ -1129,6 +1129,7 @@ function SPD:Scan(unit)
 	local i = 1
 	while true do
 		local nextLoop
+		-- 1.1.0 - Updated UnitAura for New API Output.
 		-- local name, _, icon, count, _, duration, expTime, _, isDispellable, _, spellID = UnitAura(unit, i, "HELPFUL")
 		local name, icon, count, _, duration, expTime, _, isDispellable, _, spellID = UnitAura(unit, i, "HELPFUL")
 		if name then
