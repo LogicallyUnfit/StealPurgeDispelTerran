@@ -1,3 +1,5 @@
+WoW Addon - https://www.curseforge.com/wow/addons/stealpurgedispel-terranupdate
+
 Description
 
 Steal, Purge & Dispel (SP&D) provides several tools to help you achieve efficient offensive dispel of your target and your focus. SP&D works with magic dispel as well as enrage dispel. The addon will automatically load if your character knows a dispel spell but will remain quiet otherwise.
