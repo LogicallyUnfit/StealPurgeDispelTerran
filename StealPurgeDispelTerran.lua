@@ -1,8 +1,8 @@
 ﻿--[[
-Title: Steal, Purge & Dispel
-Author: Istaran | Medivh - EU
-Version: 1.0.6
-Release date: 2014-10-16T17:30:58Z
+Title: Steal, Purge & Dispel - Terran Update
+Author: Istaran | Updated By LogicallyUnfit - Terran Empire
+Version: 1.1.1
+Release date: 3/31/2020 8:00a
 Steal, Purge & Dispel is licensed under GPLv3.
 ]]
 
@@ -15,7 +15,7 @@ local SPD = StealPurgeDispel
 
 -- checks if addon must be enabled and registers player class
 do
-	local dispellers = {"MAGE", "PRIEST", "WARLOCK", "SHAMAN", "WARRIOR", "HUNTER", "ROGUE", "DEATHKNIGHT", "DRUID"}
+	local dispellers = {"MAGE", "PRIEST", "WARLOCK", "SHAMAN", "WARRIOR", "HUNTER", "ROGUE", "DEATHKNIGHT", "DRUID", "MONK"}
 	local _, playerClass = UnitClass("player")
 	for _, v in ipairs(dispellers) do
 		if playerClass == v then
@@ -56,6 +56,7 @@ do
 		["ROGUE"] = 5938,			-- shiv
 		["DEATHKNIGHT"] = 45477,	-- icy touch
 		["DRUID"] = 2908,			-- soothe
+		["MONK"] = 115450,			-- detox
 		massDisp = 32375,			-- mass dispel
 		shattT = 64382,				-- shattering throw
 		immunityID1 = 45438,		-- ice block
