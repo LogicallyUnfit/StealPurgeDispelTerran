@@ -9,6 +9,10 @@ Steal, Purge & Dispel (SP&D) provides several tools to help you achieve efficien
 Hey guys, I'm LogicallyUnfit, People just call me Logic, I'm Updating this to BfA and Will be Adding Support for new spells and Classes as needed. Feel free to comment any suggestions or updates. The orginal Addon was Authored by Istaran from Medivh EU - https://www.curseforge.com/wow/addons/stealpurgedispel
 
 Change log
+1.1.1
+
+- Added Monk to Class Scanner and added monk Dispel Detox.
+
 1.1.0
 
 - Initial Fix for UnitAura() API Change
