@@ -1,7 +1,7 @@
-﻿## Interface: 80300
+﻿## Interface: 90001
 ## Title: Steal, Purge & Dispel Terran Update
 ## Author: Istaran | Updated By LogicallyUnfit - Terran Empire
-## Version: 1.1.1
+## Version: 1.1.2
 ## Notes: SP&D provides smart tools to help you achieve efficient offensive dispel.
 ## Notes-frFR: SP&D offre des outils intelligents pour vous permettre d'effectuer une dispel offensif efficace.
 ## DefaultState: Enabled

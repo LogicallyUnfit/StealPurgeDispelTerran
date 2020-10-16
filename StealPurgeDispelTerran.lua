@@ -477,7 +477,7 @@ function SPD:CompleteLoading()
 	SPD:FetchSound("focus")
 
 	-- update frame creation: drives on update script
-	SPD.F.update = CreateFrame("Frame", nil, UIPARENT)
+	SPD.F.update = CreateFrame("Frame", nil, UIPARENT, BackdropTemplateMixin and "BackdropTemplate")
 	SPD.F.update:SetScript("OnUpdate",  function(self, elapsed) SPD.OnUpdate(self, elapsed) end)
 	SPD.F.update:Hide()
 	
@@ -514,7 +514,7 @@ end
 
 -- unit main frame creation and formating
 function SPD:SetMain(unit, frame)
-	frame = frame or CreateFrame("Frame", nil, UIParent)
+	frame = frame or CreateFrame("Frame", nil, UIParent, BackdropTemplateMixin and "BackdropTemplate")
 	
 	-- size
 	if SPD.db.profile.layout.bar.icon.enabled then
@@ -601,7 +601,7 @@ end
 
 -- title frame creation and formating
 function SPD:SetTitle(unit, frame, title)
-	title = title or CreateFrame("Frame", nil, frame)
+	title = title or CreateFrame("Frame", nil, frame, BackdropTemplateMixin and "BackdropTemplate")
 	
 	if SPD.db.profile.layout.bar.icon.enabled then
 		title:SetWidth(SPD.db.profile.layout.bar[unit].width + SPD.db.profile.layout.bar[unit].height + SPD.db.profile.layout.bar.icon.padding)
@@ -632,11 +632,11 @@ function SPD:SetBar(unit, frame)
 		-- if frame is not created yet
 		if frame.bar[i] == nil then
 			frame.bar[i] = {}
-			frame.bar[i].statusbar = CreateFrame("StatusBar", nil, frame)
-			frame.bar[i].nameFrame = CreateFrame("Frame", nil, frame.bar[i].statusbar)
-			frame.bar[i].timeFrame = CreateFrame("Frame", nil, frame.bar[i].statusbar)
-			frame.bar[i].spark = CreateFrame("Frame", nil, frame.bar[i].statusbar)
-			frame.bar[i].icon = CreateFrame("Frame", nil, frame.bar[i].statusbar)
+			frame.bar[i].statusbar = CreateFrame("StatusBar", nil, frame, BackdropTemplateMixin and "BackdropTemplate")
+			frame.bar[i].nameFrame = CreateFrame("Frame", nil, frame.bar[i].statusbar, BackdropTemplateMixin and "BackdropTemplate")
+			frame.bar[i].timeFrame = CreateFrame("Frame", nil, frame.bar[i].statusbar, BackdropTemplateMixin and "BackdropTemplate")
+			frame.bar[i].spark = CreateFrame("Frame", nil, frame.bar[i].statusbar, BackdropTemplateMixin and "BackdropTemplate")
+			frame.bar[i].icon = CreateFrame("Frame", nil, frame.bar[i].statusbar, BackdropTemplateMixin and "BackdropTemplate")
 			frame.bar[i].nameFrame.nameString = frame.bar[i].nameFrame:CreateFontString(nil, "OVERLAY")
 			frame.bar[i].timeFrame.timeString = frame.bar[i].timeFrame:CreateFontString(nil, "OVERLAY")
 			frame.bar[i].timeFrame.dummyString = frame.bar[i].timeFrame:CreateFontString(nil, "OVERLAY")
@@ -815,7 +815,7 @@ end
 -- Dispel buttons -----------------------------------
 
 function SPD:SetDispelBtn(unit)
-	SPD.F[unit].btn = SPD.F[unit].btn or CreateFrame("Button", nil, UIParent, "SecureUnitButtonTemplate")
+	SPD.F[unit].btn = SPD.F[unit].btn or CreateFrame("Button", nil, UIParent, "SecureUnitButtonTemplate", BackdropTemplateMixin and "BackdropTemplate")
 	
 	-- sizing
 	SPD.F[unit].btn:SetHeight(SPD.db.profile.dispelBtn.size + SPD.db.profile.dispelBtn.extraSize)
@@ -879,7 +879,7 @@ function SPD:SetDispelBtn(unit)
 	end)
 	
 	-- button moving
-	SPD.F[unit].btn.handle = SPD.F[unit].btn.handle or CreateFrame("Frame", nil, SPD.F[unit].btn)
+	SPD.F[unit].btn.handle = SPD.F[unit].btn.handle or CreateFrame("Frame", nil, SPD.F[unit].btn, BackdropTemplateMixin and "BackdropTemplate")
 	SPD.F[unit].btn.handle:SetHeight(1)
 	SPD.F[unit].btn.handle:SetWidth(1)
 	SPD.F[unit].btn.handle:ClearAllPoints()
